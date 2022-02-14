@@ -61,7 +61,7 @@ class TitlesViewSet(viewsets.ModelViewSet):
             return TitlesReadOnlySerializer
         elif self.request.method in ('POST', 'PATCH', 'DELETE'):
             return TitlesCreateSerializer
-        return TitlesCreateSerializer
+        return TitlesReadOnlySerializer
 
 
 class CommentViewSet(viewsets.ModelViewSet):
@@ -85,8 +85,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
     serializer_class = ReviewSerializer
 
     def get_queryset(self):
-        return Review.objects.filter(
-            title_id=self.kwargs.get('title_id'))
+        title = get_object_or_404(Title, pk=self.kwargs.get('title_id'))
+        return title.reviews.all()
 
     def perform_create(self, serializer):
         title = get_object_or_404(Title, id=self.kwargs['title_id'])
