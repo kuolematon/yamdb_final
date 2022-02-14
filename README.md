@@ -29,7 +29,7 @@ git push
 
 ### Переходим в Github Actions
 ```
-https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+[![Django-app workflow](https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml)
 ```
 ### Подготовка миграций и статики, создание суперпользователя:
 ```
@@ -56,10 +56,13 @@ DB_PORT=1234
 
 ### Хост проекта:
 ```
-http://<your_ip_or_domain_name>
+http://http://84.201.166.62/
 ```
 
 ### Интструкция по работе api:
 ```
-http://<your_ip_or_domain_name>/redoc/
+http://http://84.201.166.62/redoc/
 ```
+
+## Автор
+Федор Корр
