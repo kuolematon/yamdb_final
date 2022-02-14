@@ -16,11 +16,21 @@ https://github.com/kuolematon/yamdb_final.git
 ```
 cd yamdb_final
 ```
-### Выполнить запуск docker-compose:
+
 ```
-docker-compose up -d --build
+git add .
+```
+```
+git commit -m 'first commit'
+```
+```
+git push
 ```
 
+### Переходим в Github Actions
+```
+https://github.com/<your_nickname>/yamdb_final/actions
+```
 ### Подготовка миграций и статики, создание суперпользователя:
 ```
 docker-compose exec web python manage.py migrate
@@ -46,10 +56,10 @@ DB_PORT=1234
 
 ### Хост проекта:
 ```
-http://localhost
+http://<your_ip_or_domain_name>
 ```
 
 ### Интструкция по работе api:
 ```
-http://localhost/redoc/
+http://<your_ip_or_domain_name>/redoc/
 ```
