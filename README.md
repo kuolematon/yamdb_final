@@ -53,15 +53,11 @@ DB_HOST=localhost
 DB_PORT=1234
 ```
 
-### Хост проекта:
-```
-http://84.201.166.62/
-```
+### Хост api проекта:
+<http://pr.fkorr.com/api/v1/>
 
 ### Интструкция по работе api:
-```
-http://84.201.166.62/redoc/
-```
+<http://pr.fkorr.com/redoc/>
 
 ## Автор
-Федор Корр
+[Федор Корр](https://github.com/kuolematon)
