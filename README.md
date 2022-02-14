@@ -29,7 +29,7 @@ git push
 
 ### Переходим в Github Actions
 ```
-https://github.com/your_nickname/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
 ```
 ### Подготовка миграций и статики, создание суперпользователя:
 ```
