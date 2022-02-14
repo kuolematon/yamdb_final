@@ -9,7 +9,6 @@ from rest_framework.decorators import action, api_view
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
 from reviews.models import Review
 from titles.models import Category, Genre, Title
 from users.models import User
@@ -62,6 +61,7 @@ class TitlesViewSet(viewsets.ModelViewSet):
             return TitlesReadOnlySerializer
         elif self.request.method in ('POST', 'PATCH', 'DELETE'):
             return TitlesCreateSerializer
+        return TitlesCreateSerializer
 
 
 class CommentViewSet(viewsets.ModelViewSet):
@@ -85,10 +85,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
     serializer_class = ReviewSerializer
 
     def get_queryset(self):
-        review = Review.objects.filter(
-            title_id=self.kwargs.get('title_id')
-        )
-        return review
+        return Review.objects.filter(
+            title_id=self.kwargs.get('title_id'))
 
     def perform_create(self, serializer):
         title = get_object_or_404(Title, id=self.kwargs['title_id'])
