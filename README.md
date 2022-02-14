@@ -27,10 +27,9 @@ git commit -m 'first commit'
 git push
 ```
 
-### Переходим в Github Actions
-```
+###  Github Actions
 [![Django-app workflow](https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/kuolematon/yamdb_final/actions/workflows/yamdb_workflow.yml)
-```
+
 ### Подготовка миграций и статики, создание суперпользователя:
 ```
 docker-compose exec web python manage.py migrate
